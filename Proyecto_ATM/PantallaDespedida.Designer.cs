@@ -29,60 +29,49 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PantallaDespedida));
-            label2 = new Label();
             label1 = new Label();
             pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.Transparent;
-            label2.FlatStyle = FlatStyle.Popup;
-            label2.Font = new Font("Candara", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(88, 130);
-            label2.Name = "label2";
-            label2.Size = new Size(225, 49);
-            label2.TabIndex = 1;
-            label2.Text = "¡Gracias por";
-            // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.Top;
             label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.FlatStyle = FlatStyle.Popup;
-            label1.Font = new Font("Calibri", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Calibri", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(94, 179);
+            label1.Location = new Point(176, 0);
             label1.Name = "label1";
-            label1.Size = new Size(219, 49);
-            label1.TabIndex = 2;
-            label1.Text = "preferirnos!";
-            
+            label1.Size = new Size(515, 59);
+            label1.TabIndex = 14;
+            label1.Text = "¡Gracias por preferirnos!";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // pictureBox1
             // 
+            pictureBox1.Anchor = AnchorStyles.None;
+            pictureBox1.BackgroundImageLayout = ImageLayout.Center;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(42, 68);
+            pictureBox1.Location = new Point(31, 70);
+            pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(952, 603);
+            pictureBox1.Size = new Size(833, 432);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 3;
+            pictureBox1.TabIndex = 15;
             pictureBox1.TabStop = false;
             // 
             // PantallaDespedida
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(238, 39, 55);
-            Controls.Add(label1);
-            Controls.Add(label2);
             Controls.Add(pictureBox1);
+            Controls.Add(label1);
             ForeColor = SystemColors.ControlText;
+            Margin = new Padding(3, 2, 3, 2);
+            MinimumSize = new Size(896, 576);
             Name = "PantallaDespedida";
-            Size = new Size(1024, 721);
+            Size = new Size(896, 541);
             Load += PantallaDespedida_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
@@ -90,8 +79,6 @@
         }
 
         #endregion
-
-        private Label label2;
         private Label label1;
         private PictureBox pictureBox1;
     }

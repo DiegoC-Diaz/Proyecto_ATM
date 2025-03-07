@@ -17,19 +17,57 @@ namespace Proyecto_ATM
             InitializeComponent();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        public event EventHandler salirMenuRetiro;
+
+
+        public event EventHandler redIngresoTarjeta_MenuRetiro;
+        public event EventHandler redIngresoSinTarjeta_MenuRetiro;
+
+        private void PantallaMenuRetiro_Load(object sender, EventArgs e)
         {
-            Console.WriteLine("Hello World");
+
         }
 
-     
-
-        private void pictureBox1_Click_1(object sender, EventArgs e)
+        private void R_Normal_B_Click(object sender, EventArgs e)
         {
-            
-
-            // Hide the current form or UserControl
-            this.Hide();
+            if (this.redIngresoTarjeta_MenuRetiro != null)
+            {
+                this.redIngresoTarjeta_MenuRetiro(this, e);
+            }
+            else
+            {
+                Console.WriteLine("Error al cambiar panel Menu de Retiro ->ingreso de tarjeta\n");
+            }
         }
+
+        private void R_SinTarjeta_B_Click(object sender, EventArgs e)
+        {
+            if (this.redIngresoSinTarjeta_MenuRetiro != null)
+            {
+                this.redIngresoSinTarjeta_MenuRetiro(this, e);
+            }
+            else
+            {
+                Console.WriteLine("Error al cambiar panel Menu de Retiro ->retiro sin tarjeta\n");
+            }
+        }
+
+        private void SalirBtn_Click(object sender, EventArgs e)
+        {
+            if (this.salirMenuRetiro != null)
+            {
+                this.salirMenuRetiro(this, e);
+            }
+            else
+            {
+                Console.WriteLine("Error al cambiar panel Menu de Retiro\n");
+            }
+        }
+
+        private void roundButton2_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

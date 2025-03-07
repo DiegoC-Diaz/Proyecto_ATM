@@ -16,5 +16,46 @@ namespace Proyecto_ATM
         {
             InitializeComponent();
         }
+
+        public event EventHandler cambiarEspera;
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void regresar_btn_Click(object sender, EventArgs e)
+        {
+            if (this.cambiarEspera != null)
+            {
+                this.cambiarEspera(this, e);
+
+            }
+            else
+            {
+                Console.WriteLine("Error");
+            }
+        }
+
+        private void salir_btn_Click(object sender, EventArgs e)
+        {
+            if (this.cambiarEspera != null)
+            {
+                this.cambiarEspera(this, e);
+
+            }
+            else
+            {
+                Console.WriteLine("Error");
+            }
+
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

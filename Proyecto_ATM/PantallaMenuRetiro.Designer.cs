@@ -28,68 +28,119 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PantallaMenuRetiro));
+            R_SinTarjeta_B = new PictureBox();
+            R_Normal_B = new PictureBox();
+            SalirBtn = new RoundButton();
+            roundButton2 = new RoundButton();
             label1 = new Label();
-            pictureBox1 = new PictureBox();
-            pictureBox2 = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)R_SinTarjeta_B).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)R_Normal_B).BeginInit();
             SuspendLayout();
+            // 
+            // R_SinTarjeta_B
+            // 
+            R_SinTarjeta_B.Anchor = AnchorStyles.None;
+            R_SinTarjeta_B.Image = Properties.Resources.retiro_sin_tarjeta;
+            R_SinTarjeta_B.Location = new Point(71, 153);
+            R_SinTarjeta_B.Name = "R_SinTarjeta_B";
+            R_SinTarjeta_B.Size = new Size(400, 400);
+            R_SinTarjeta_B.SizeMode = PictureBoxSizeMode.StretchImage;
+            R_SinTarjeta_B.TabIndex = 2;
+            R_SinTarjeta_B.TabStop = false;
+            R_SinTarjeta_B.Click += R_SinTarjeta_B_Click;
+            // 
+            // R_Normal_B
+            // 
+            R_Normal_B.Anchor = AnchorStyles.None;
+            R_Normal_B.Image = Properties.Resources.retiro_Normal;
+            R_Normal_B.Location = new Point(553, 153);
+            R_Normal_B.Name = "R_Normal_B";
+            R_Normal_B.Size = new Size(400, 400);
+            R_Normal_B.SizeMode = PictureBoxSizeMode.StretchImage;
+            R_Normal_B.TabIndex = 3;
+            R_Normal_B.TabStop = false;
+            R_Normal_B.Click += R_Normal_B_Click;
+            // 
+            // SalirBtn
+            // 
+            SalirBtn.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            SalirBtn.BackColor = Color.FromArgb(204, 24, 38);
+            SalirBtn.BackgroundColor = Color.FromArgb(204, 24, 38);
+            SalirBtn.BorderColor = Color.FromArgb(204, 24, 38);
+            SalirBtn.BorderRadius = 10;
+            SalirBtn.BorderSize = 1;
+            SalirBtn.FlatAppearance.BorderSize = 0;
+            SalirBtn.FlatStyle = FlatStyle.Flat;
+            SalirBtn.Font = new Font("Calibri", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            SalirBtn.ForeColor = Color.White;
+            SalirBtn.Location = new Point(805, 664);
+            SalirBtn.Name = "SalirBtn";
+            SalirBtn.Size = new Size(223, 68);
+            SalirBtn.TabIndex = 5;
+            SalirBtn.Text = "Salir";
+            SalirBtn.TextColor = Color.White;
+            SalirBtn.UseVisualStyleBackColor = false;
+            SalirBtn.Click += SalirBtn_Click;
+            // 
+            // roundButton2
+            // 
+            roundButton2.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            roundButton2.BackColor = Color.FromArgb(143, 14, 24);
+            roundButton2.BackgroundColor = Color.FromArgb(143, 14, 24);
+            roundButton2.BorderColor = Color.PaleVioletRed;
+            roundButton2.BorderRadius = 10;
+            roundButton2.BorderSize = 0;
+            roundButton2.Enabled = false;
+            roundButton2.FlatAppearance.BorderSize = 0;
+            roundButton2.FlatStyle = FlatStyle.Flat;
+            roundButton2.Font = new Font("Calibri", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            roundButton2.ForeColor = Color.White;
+            roundButton2.Location = new Point(805, 677);
+            roundButton2.Name = "roundButton2";
+            roundButton2.Size = new Size(223, 68);
+            roundButton2.TabIndex = 6;
+            roundButton2.TextColor = Color.White;
+            roundButton2.UseVisualStyleBackColor = false;
+            roundButton2.Click += roundButton2_Click;
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.Top;
             label1.AutoSize = true;
-            label1.Location = new Point(506, 318);
+            label1.Font = new Font("Calibri", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(202, 45);
             label1.Name = "label1";
-            label1.Size = new Size(117, 15);
-            label1.TabIndex = 0;
-            label1.Text = "Pantalla Menu Retiro";
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Cursor = Cursors.Hand;
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(86, 76);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(337, 334);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 1;
-            pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click_1;
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.Cursor = Cursors.Hand;
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(485, 76);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(337, 334);
-            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox2.TabIndex = 2;
-            pictureBox2.TabStop = false;
-            pictureBox2.Click += pictureBox1_Click;
+            label1.Size = new Size(668, 73);
+            label1.TabIndex = 7;
+            label1.Text = "Porfavor elija una opción.";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // PantallaMenuRetiro
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(238, 39, 55);
-            Controls.Add(pictureBox2);
-            Controls.Add(pictureBox1);
             Controls.Add(label1);
-            Margin = new Padding(3, 2, 3, 2);
+            Controls.Add(SalirBtn);
+            Controls.Add(roundButton2);
+            Controls.Add(R_Normal_B);
+            Controls.Add(R_SinTarjeta_B);
             Name = "PantallaMenuRetiro";
-            Size = new Size(896, 541);
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            Size = new Size(1024, 768);
+            Load += PantallaMenuRetiro_Load;
+            ((System.ComponentModel.ISupportInitialize)R_SinTarjeta_B).EndInit();
+            ((System.ComponentModel.ISupportInitialize)R_Normal_B).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
+        private PictureBox R_SinTarjeta_B;
+        private PictureBox R_Normal_B;
+        private RoundButton SalirBtn;
+        private RoundButton roundButton2;
         private Label label1;
-        private PictureBox pictureBox1;
-        private PictureBox pictureBox2;
     }
 }

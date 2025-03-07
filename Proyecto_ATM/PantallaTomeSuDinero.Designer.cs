@@ -36,6 +36,9 @@ partial class PantallaTomeSuDinero
         ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
         ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
         SuspendLayout();
+
+        this.Load += new System.EventHandler(this.PantallaTomeSuDinero_Load);
+
         // 
         // pictureBox1
         // 

@@ -36,37 +36,42 @@
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.Bottom;
             label1.AutoSize = true;
             label1.FlatStyle = FlatStyle.Flat;
             label1.Font = new Font("Calibri", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(221, 635);
+            label1.Location = new Point(193, 476);
             label1.Name = "label1";
-            label1.Size = new Size(640, 49);
+            label1.Size = new Size(510, 39);
             label1.TabIndex = 0;
             label1.Text = "Pulse cualquier boton para continuar.";
-            label1.Click += label1_Click;
             // 
             // pictureBox1
             // 
+            pictureBox1.Anchor = AnchorStyles.None;
             pictureBox1.BackgroundImageLayout = ImageLayout.Center;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(37, 72);
+            pictureBox1.Location = new Point(32, 54);
+            pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(952, 520);
+            pictureBox1.Size = new Size(833, 390);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
             // 
             // PantallaBienvenida
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(238, 39, 55);
             Controls.Add(pictureBox1);
             Controls.Add(label1);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "PantallaBienvenida";
-            Size = new Size(1024, 721);
+            Size = new Size(896, 541);
+            Load += PantallaBienvenida_Load;
+            VisibleChanged += PantallaBienvenida_VisibleChanged;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
